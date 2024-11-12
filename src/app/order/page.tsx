@@ -36,6 +36,7 @@ const productOptions: { [key: string]: Option[] } = {
 
 const Order = () => {
   const [selectedOrderer, setSelectedOrderer] = useState("");
+  const [selectedProduct, setSelectedProduct] = useState("");
   const [currentProductOptions, setCurrentProductOptions] = useState<Option[]>(
     []
   );
@@ -88,8 +89,8 @@ const Order = () => {
           <div className="h-96 w-full">
             <ItemLabel label="제품명" required={true} />
             <InputSelectBox
-              value={selectedOrderer}
-              onChange={(e) => setSelectedOrderer(e.target.value)}
+              value={selectedProduct}
+              onChange={(e) => setSelectedProduct(e.target.value)}
               options={currentProductOptions}
               margin="mb-4"
             />

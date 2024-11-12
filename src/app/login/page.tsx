@@ -11,7 +11,6 @@ const MyLogin = () => {
 
   const handleLogin = () => {
     if (username === "admin" && password === "1111") {
-      console.log("test");
       router.push("/order");
     } else {
       alert("아이디 또는 비밀번호가 일치하지 않습니다.");
@@ -22,7 +21,7 @@ const MyLogin = () => {
     <div className="min-h-screen flex flex-col">
       <div className="flex flex-col flex-grow items-center justify-center">
         <Image src={imgLogo} alt="엔젤리너스" width={300} height={20}></Image>
-        <p className="h-14 flex flex-col font-bold">주문시스템 로그인 </p>
+        <p className="h-14 flex flex-col font-bold mt-4">주문시스템 로그인 </p>
         <input
           type="text"
           value={username}

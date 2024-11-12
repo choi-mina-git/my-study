@@ -3,7 +3,7 @@ import { textBoxCommonStyles } from "../utils/styles";
 
 interface SelectBoxProps {
   value: string;
-  onChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+  onChange?: (event: React.ChangeEvent<HTMLSelectElement>) => void;
   options: { value: string; label: string }[];
   height?: string;
   width?: string;
@@ -12,7 +12,7 @@ interface SelectBoxProps {
 
 const InputSelectBox: React.FC<SelectBoxProps> = ({
   value,
-  onChange,
+  onChange = () => {},
   options,
   height = "40px",
   width = "100%",
